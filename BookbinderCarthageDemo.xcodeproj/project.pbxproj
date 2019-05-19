@@ -13,6 +13,9 @@
 		252FC62222901449004C72D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 252FC62122901449004C72D9 /* Assets.xcassets */; };
 		252FC62522901449004C72D9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252FC62322901449004C72D9 /* LaunchScreen.storyboard */; };
 		252FC63022901449004C72D9 /* BookbinderCarthageDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FC62F22901449004C72D9 /* BookbinderCarthageDemoTests.swift */; };
+		25728EE02292194A00DAC525 /* Bookbinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25728EDF2292194A00DAC525 /* Bookbinder.framework */; };
+		25728EE422921A1700DAC525 /* ZIPFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25728EE222921A1600DAC525 /* ZIPFoundation.framework */; };
+		25728EE522921A1700DAC525 /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25728EE322921A1700DAC525 /* Kanna.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		252FC62B22901449004C72D9 /* BookbinderCarthageDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookbinderCarthageDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		252FC62F22901449004C72D9 /* BookbinderCarthageDemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookbinderCarthageDemoTests.swift; sourceTree = "<group>"; };
 		252FC63122901449004C72D9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		25728EDF2292194A00DAC525 /* Bookbinder.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Bookbinder.framework; path = Carthage/Build/iOS/Bookbinder.framework; sourceTree = "<group>"; };
+		25728EE222921A1600DAC525 /* ZIPFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ZIPFoundation.framework; path = Carthage/Build/iOS/ZIPFoundation.framework; sourceTree = "<group>"; };
+		25728EE322921A1700DAC525 /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +49,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25728EE422921A1700DAC525 /* ZIPFoundation.framework in Frameworks */,
+				25728EE522921A1700DAC525 /* Kanna.framework in Frameworks */,
+				25728EE02292194A00DAC525 /* Bookbinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +71,7 @@
 				252FC61922901448004C72D9 /* BookbinderCarthageDemo */,
 				252FC62E22901449004C72D9 /* BookbinderCarthageDemoTests */,
 				252FC61822901448004C72D9 /* Products */,
+				25728EDE2292194A00DAC525 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +106,16 @@
 			path = BookbinderCarthageDemoTests;
 			sourceTree = "<group>";
 		};
+		25728EDE2292194A00DAC525 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25728EE322921A1700DAC525 /* Kanna.framework */,
+				25728EE222921A1600DAC525 /* ZIPFoundation.framework */,
+				25728EDF2292194A00DAC525 /* Bookbinder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +126,7 @@
 				252FC61322901448004C72D9 /* Sources */,
 				252FC61422901448004C72D9 /* Frameworks */,
 				252FC61522901448004C72D9 /* Resources */,
+				25728EE12292195400DAC525 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -191,6 +212,32 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		25728EE12292195400DAC525 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Bookbinder.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kanna.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/ZIPFoundation.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Bookbinder.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kanna.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/ZIPFoundation.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		252FC61322901448004C72D9 /* Sources */ = {
@@ -362,6 +409,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CCBW5GSHKT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BookbinderCarthageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -380,6 +431,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = CCBW5GSHKT;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = BookbinderCarthageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
