@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		251FD22822E761CA0015C9CA /* epub in Resources */ = {isa = PBXBuildFile; fileRef = 251FD22722E761CA0015C9CA /* epub */; };
 		252FC61B22901448004C72D9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FC61A22901448004C72D9 /* AppDelegate.swift */; };
 		252FC61D22901448004C72D9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252FC61C22901448004C72D9 /* ViewController.swift */; };
 		252FC62022901448004C72D9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 252FC61E22901448004C72D9 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		251FD22722E761CA0015C9CA /* epub */ = {isa = PBXFileReference; lastKnownFileType = folder; path = epub; sourceTree = "<group>"; };
 		252FC61722901448004C72D9 /* BookbinderCarthageDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookbinderCarthageDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		252FC61A22901448004C72D9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		252FC61C22901448004C72D9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		252FC61922901448004C72D9 /* BookbinderCarthageDemo */ = {
 			isa = PBXGroup;
 			children = (
+				251FD22722E761CA0015C9CA /* epub */,
 				252FC61A22901448004C72D9 /* AppDelegate.swift */,
 				252FC61C22901448004C72D9 /* ViewController.swift */,
 				252FC61E22901448004C72D9 /* Main.storyboard */,
@@ -198,6 +201,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				251FD22822E761CA0015C9CA /* epub in Resources */,
 				252FC62522901449004C72D9 /* LaunchScreen.storyboard in Resources */,
 				252FC62222901449004C72D9 /* Assets.xcassets in Resources */,
 				252FC62022901448004C72D9 /* Main.storyboard in Resources */,
@@ -413,6 +417,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = BookbinderCarthageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -435,6 +440,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = BookbinderCarthageDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
